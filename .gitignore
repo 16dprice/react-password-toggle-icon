@@ -1,0 +1,6 @@
+/node_modules
+build/
+dist/
+.cache/
+package-lock.json
+index.html
