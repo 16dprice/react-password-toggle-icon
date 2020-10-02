@@ -1,8 +1,12 @@
 {
   "name": "react-password-toggle-icon",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a lightweight password hide show package",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/psd8/react-password-toggle-icon"
+  },
   "scripts": {
     "dev": "webpack --watch",
     "build": "webpack",
