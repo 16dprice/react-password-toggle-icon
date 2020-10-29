@@ -2,8 +2,8 @@ import React from 'react';
 import propTypes from 'prop-types';
 
 const defaultStyle={
-    width:"16px",
-    height:"16px",
+    width:"auto",
+    height:"auto",
     position:"absolute",
     right:"10px",
     top:"0",
@@ -20,7 +20,12 @@ class App extends React.PureComponent {
             isVisible: false
         }
     }
-        
+    componentDidMount(){
+        this.props.isVisible ?
+        this.setState({
+            isVisible:this.props.isVisible
+        }) : null;
+    }
     handleClick(inputRef){
         this.setState({
             isVisible : !this.state.isVisible
@@ -35,11 +40,13 @@ class App extends React.PureComponent {
             showIcon,
             hideIcon,
             inputRef,
-            style
+            style,
+            parentClassName
         } = this.props;
+        console.log(typeof inputRef);
         const {isVisible} = this.state;
         return (
-            <div onClick={() => this.handleClick(inputRef)} style={{...defaultStyle,...style}}>
+            <div className={"react-password-toggle-icon-wrapper"+" "+parentClassName} onClick={() => this.handleClick(inputRef)} style={{...defaultStyle,...style}}>
                 {!isVisible ?  hideIcon : showIcon}
             </div>
         );
@@ -50,10 +57,15 @@ export default App;
 
 App.defaultProps = {
     showIcon:"Hide",
-    hideIcon:"Show"
+    hideIcon:"Show",
+    inputRef:"",
+    parentClassName: "",
+    isVisible:"false"
 }
 App.propTypes = {
     showIcon:propTypes.oneOfType([propTypes.string,propTypes.func]).isRequired,
-    hideIcon:propTypes.oneOfType([propTypes.string,propTypes.func]).isRequired
-
+    hideIcon:propTypes.oneOfType([propTypes.string,propTypes.func]).isRequired,
+    inputRef:propTypes.object.isRequired,
+    parentClassName: propTypes.string,
+    isVisible:propTypes.bool
 }
