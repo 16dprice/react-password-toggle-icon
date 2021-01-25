@@ -1,4 +1,6 @@
 # react-password-toggle-icon
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpsd8%2Freact-password-toggle-icon.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpsd8%2Freact-password-toggle-icon?ref=badge_shield)
+
 
 A lightweight package to toggle password visibility on click of the icon. you nee to pass hide-show icon and ref of input field that's it and this package will toggle password visibility.
 
@@ -43,3 +45,7 @@ Hope This package will helpful 😊
 
 cheers 🥂!!
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpsd8%2Freact-password-toggle-icon.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpsd8%2Freact-password-toggle-icon?ref=badge_large)
