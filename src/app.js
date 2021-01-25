@@ -49,7 +49,7 @@ class App extends React.PureComponent {
         const showVal = typeof showIcon === "string" ? showIcon : showIcon();
         return (
             <div className={"react-password-toggle-icon-wrapper"+" "+parentClassName} onClick={() => this.handleClick(inputRef)} style={{...defaultStyle,...style}}>
-                {isVisible ?  hideVal : showVal}
+                {!isVisible ?  hideVal : showVal}
             </div>
         );
     }
@@ -58,8 +58,8 @@ class App extends React.PureComponent {
 export default App;
 
 App.defaultProps = {
-    showIcon:"Hide",
-    hideIcon:"Show",
+    showIcon:"Show",
+    hideIcon:"Hide",
     inputRef:"",
     parentClassName: "",
     isVisible:"false"
