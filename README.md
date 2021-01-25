@@ -44,3 +44,7 @@ Hope This package will helpful 😊
 
 cheers 🥂!!
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpsd8%2Freact-password-toggle-icon.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpsd8%2Freact-password-toggle-icon?ref=badge_large)
